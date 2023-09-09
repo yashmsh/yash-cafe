@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: website-simply-service
+  namespace: default
+spec:
+  selector:
+    app: website-simply
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30021
