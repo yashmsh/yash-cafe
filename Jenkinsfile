@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        build(waitForStart: true, job: 'npm')
+        build 'npm install '
       }
     }
 
