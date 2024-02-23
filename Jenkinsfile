@@ -9,12 +9,18 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('error') {
           steps {
             build 'npm run build'
           }
         }
 
+      }
+    }
+
+    stage('Test') {
+      steps {
+        junit 'test'
       }
     }
 
